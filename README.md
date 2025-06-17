@@ -41,23 +41,25 @@
 
 ## 📂 Installation
 
-1. **Clone the repository**
+**Clone the repository**
    ```bash
    git clone https://github.com/sidharthpandithar/CertiKey.git
    cd CertiKey
 ```
 
-2. **Install dependencies for both frontend and backend**
+**Install dependencies for both frontend and backend**
 
    ```bash
    cd client && npm install
    cd ../server && npm install
    ```
 
-3. **Set up your `.env` files**
+**Set up your `.env` files**
+```bash
    Create `.env` files in both `client` and `server` folders and add the required environment variables.
+```
 
-4. **Run the app**
+**Run the app**
    Use `concurrently` or separate terminals:
 
    ```bash
