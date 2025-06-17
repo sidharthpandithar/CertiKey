@@ -1,0 +1,6 @@
+@import "tailwindcss";
+* {
+  font-family: "Funnel Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
