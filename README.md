@@ -1,21 +1,21 @@
-# 🔐 CertiKey – Password Manager (MERN Stack)
+# CertiKey – Password Manager (MERN Stack)
 
 **CertiKey** is a full-stack password manager web application built using the **MERN stack** (MongoDB, Express.js, React, Node.js). It allows users to **securely store, manage, and delete** their saved passwords—all in a sleek and responsive UI.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 User authentication with Passport.js  
-- 🧠 Secure password encryption and storage  
-- ➕ Add, view, and delete stored credentials  
-- 📱 Fully responsive React frontend  
-- 🌐 RESTful API with Express & MongoDB  
-- ☁️ Session-based login with cookie support
+- User authentication with Passport.js  
+- Secure password encryption and storage  
+- Add, view, and delete stored credentials  
+- Fully responsive React frontend  
+- RESTful API with Express & MongoDB  
+- Session-based login with cookie support
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React, Tailwind CSS  
 - **Backend**: Express.js, Node.js  
@@ -24,14 +24,14 @@
 
 ---
 
-## 📹 Demo Video
+## Demo Video
 
-🎥 Watch how it works on YouTube:  
-[▶️ Click here to watch the video](https://youtu.be/JVBFdUonq28)
+Watch how it works on YouTube:  
+[Click here to watch the video](https://youtu.be/JVBFdUonq28)
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 | Log In | Add Password | View Password |
 |----------|--------------|----------------|
@@ -39,7 +39,7 @@
 
 ---
 
-## 📂 Installation
+## Installation
 
 **Clone the repository**
    ```bash
@@ -68,20 +68,20 @@
 
 ---
 
-## 📎 License
+## License
 
 This project is open source under the [MIT License](LICENSE).
 
 ---
 
-## 🙌 Contribution
+## Contribution
 
 Feel free to fork the repo and contribute.
 Pull requests are welcome!
 
 ---
 
-## 👋 Author
+## Author
 
 Made with ❤️ by [Sidharth Pandithar](https://github.com/sidharthpandithar)
 
