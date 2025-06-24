@@ -13,7 +13,14 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
-          <Route path="/" element={<Login />}></Route>
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <PasswordManager />
+              </ProtectedRoute>
+            }
+          ></Route>
           <Route
             path="/savedpasswords"
             element={
