@@ -28,16 +28,20 @@ router.post("/", async (req, res) => {
 
 router.get("/viewPasswords", async (req, res) => {
   try {
-    const userId = req.user._id;
+    console.log("Session:", req.session);
+    console.log("User:", req.user);
 
-    const passwords = await Passwords.find({ data_owner: userId });
+    if (!req.isAuthenticated() || !req.user) {
+      return res.status(401).json({ message: "User not authenticated" });
+    }
 
-    res.status(200).json(passwords);
+    const passwords = await Passwords.find({ data_owner: req.user._id });
+    res.json(passwords);
   } catch (err) {
-    console.error("Fetch error:", err);
+    console.error("viewPasswords error:", err); // ✅ You'll see this in terminal
     res
       .status(500)
-      .json({ message: "Failed to fetch passwords", error: err.message });
+      .json({ error: "Internal Server Error", details: err.message });
   }
 });
 

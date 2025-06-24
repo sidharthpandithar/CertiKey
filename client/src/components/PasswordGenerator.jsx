@@ -43,28 +43,35 @@ function PasswordGenerator() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="p-4 space-y-4">
+      <div className="p-4">
         <h2 className="text-xl font-bold">Password Generator</h2>
 
         <label>
-          Length:
-          <input
-            type="number"
-            min={4}
-            max={64}
-            value={length}
-            onChange={(e) => setLength(Number(e.target.value))}
-          />
+          <div className="flex justify-around pt-4">
+            <span className="">Length:</span>
+            <span>
+              <input
+                type="number"
+                min={4}
+                max={64}
+                value={length}
+                className=" border rounded-md border-zinc-500 active:border-zinc-50 w-25 text-center"
+                onChange={(e) => setLength(Number(e.target.value))}
+              />
+            </span>
+          </div>
         </label>
+
         <br />
 
         <label>
           <input
             type="checkbox"
             checked={numbers}
+            className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded-sm focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             onChange={() => setNumbers(!numbers)}
           />
-          Include Numbers
+          <span className="pl-4">Include Numbers</span>
         </label>
         <br />
 
@@ -72,9 +79,10 @@ function PasswordGenerator() {
           <input
             type="checkbox"
             checked={symbols}
+            className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded-sm focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             onChange={() => setSymbols(!symbols)}
           />
-          Include Symbols
+          <span className="pl-4">Include Symbols</span>
         </label>
         <br />
 
@@ -82,9 +90,10 @@ function PasswordGenerator() {
           <input
             type="checkbox"
             checked={uppercase}
+            className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded-sm focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             onChange={() => setUppercase(!uppercase)}
           />
-          Include Uppercase
+          <span className="pl-4">Include Uppercase</span>
         </label>
         <br />
 
@@ -92,15 +101,16 @@ function PasswordGenerator() {
           <input
             type="checkbox"
             checked={lowercase}
+            className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded-sm focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             onChange={() => setLowercase(!lowercase)}
           />
-          Include Lowercase
+          <span className="pl-4">Include Lowercase</span>
         </label>
         <br />
 
         <button
           onClick={generatePassword}
-          className=" mt-5 rounded-xl h-10 w-50 text-zinc-900 font-semi-bold bg-zinc-500 gap-2 justify-center items-center flex hover:scale-102 hover:font-bold hover:cursor-pointer"
+          className=" mt-5 rounded-xl h-10 w-50 text-zinc-900  bg-zinc-500 gap-2 justify-center items-center flex hover:scale-102 hover:font-bold hover:cursor-pointer"
         >
           Generate Password
         </button>

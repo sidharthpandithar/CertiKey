@@ -11,6 +11,7 @@ const passport = require("passport");
 const passwordRoutes = require("./routes/passwords");
 const passwordGenerator = require("./routes/generatePassword");
 const MongoStore = require("connect-mongo");
+const User = require("./models/User"); // ⬅️ use the model here
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -51,8 +52,8 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-passport.serializeUser(usersRouter.serializeUser());
-passport.deserializeUser(usersRouter.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 app.use(logger("dev"));
 app.use(express.json());
