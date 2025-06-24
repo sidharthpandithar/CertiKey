@@ -8,7 +8,7 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-zinc-800 to-zinc-900 h-screen w-full ;">
+    <div className="bg-gradient-to-r from-zinc-800 to-zinc-900 min-h-screen w-full ;">
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />}></Route>

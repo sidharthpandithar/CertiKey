@@ -61,7 +61,7 @@ export default function LoginForm() {
 
   return (
     <div className="w-full relative flex flex-col bg-[#323232] overflow-hidden rounded-r-md rounded-b-md justify-center items-center h-full">
-      <div className="w-[58.3vw] h-1/5 border-t-2  absolute right-0 top-0 rounded-tr-md"></div>
+      <div className="md:w-[43.7vw] w-47 h-1/5 border-t-2  absolute right-0 top-0 rounded-tr-md"></div>
       <div className="h-4/5 w-4/5 flex flex-col">
         <div className="w-full h-1/5 text-center gap-3 flex flex-col justify-center items-center">
           <div className="text-white w-full h-3/4 flex justify-center items-center text-2xl font-bold">
@@ -78,9 +78,9 @@ export default function LoginForm() {
             className="flex items-center flex-col gap-10 mt-10"
             onSubmit={handleSubmit}
           >
-            <div className="flex gap-5 ">
+            <div className="flex gap-0 ">
               <div className="w-25">
-                <label className="text-white font-bold text-xl" htmlFor="">
+                <label className="text-white font-bold text-base" htmlFor="">
                   Username
                 </label>{" "}
               </div>
@@ -93,9 +93,9 @@ export default function LoginForm() {
                 type="text"
               />
             </div>
-            <div className="flex gap-5 ">
+            <div className="flex gap-0 ">
               <div className="w-25">
-                <label className="text-white  font-bold text-xl" htmlFor="">
+                <label className="text-white  font-bold text-base" htmlFor="">
                   Password
                 </label>{" "}
               </div>
@@ -111,7 +111,7 @@ export default function LoginForm() {
           </form>
         </div>
         <div className="h-full gap-10 w-full flex flex-col items-center ">
-          <div className=" w-1/9 justify-center rounded-md items-center text-center ">
+          <div className=" w-full flex justify-center rounded-md items-center text-center ">
             <button
               form="login-form"
               type="submit"

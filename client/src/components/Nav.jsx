@@ -43,14 +43,14 @@ export default function Nav() {
     <nav className="flex justify-between items-center text-white bg-[#323232] w-full h-[6%] p-3">
       <span
         onClick={() => navigate("/")}
-        className="Logo hover:cursor-pointer font-bold text-2xl  text-white"
+        className="Logo hover:cursor-pointer font-bold md:text-2xl  text-white"
       >
         Certi<span className=" text-amber-400">Key</span>
       </span>
-      <div className="flex gap-10 font-semibold ">
+      <div className=" flex gap-10 font-semibold ">
         <span
           onClick={() => navigate("/")}
-          className="hover:text-zinc-200 hover:scale-102 hover:cursor-pointer"
+          className="hover:text-zinc-200 hidden md:block hover:scale-102 hover:cursor-pointer"
         >
           Home
         </span>

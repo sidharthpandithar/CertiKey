@@ -81,9 +81,9 @@ export default function PasswordManager() {
   return (
     <div className="h-[80%] w-full">
       <Nav />
-      <div className=" flex  justify-center  mt-20 h-full w-full text-white">
-        <div className="mainContainer  h-6/7 w-1/2  drop-shadow-zinc-900 flex flex-col justify-center items-center bg-gradient-to-r from-[#323232] to-[#353535] rounded-2xl">
-          <div className=" h-full w-full   flex justify-center items-center flex-col gap-10 ">
+      <div className=" flex  justify-center  md:mt-20 py-[5%]  h-screen md:h-full w-full text-white">
+        <div className="mainContainer  h-full md:w-1/2 w-[90%] drop-shadow-zinc-900 flex flex-col justify-center items-center bg-gradient-to-r from-[#323232] to-[#353535] rounded-2xl">
+          <div className=" h-full w-full flex justify-center items-center flex-col gap-10 ">
             <div className=" mt-10  w-full text-center text-3xl font-bold ">
               Certi<span className=" text-amber-400">Key</span>
             </div>
@@ -98,14 +98,14 @@ export default function PasswordManager() {
                 placeholder="Website URL"
               />
             </div>
-            <div className="   w-full flex justify-between  items-center">
+            <div className=" flex-col md:flex-row w-full flex justify-center gap-10 items-center">
               <div className="">
                 <input
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   type="text"
                   name="username"
-                  className="  border border-zinc-500 ml-5  w-80 rounded-md p-1"
+                  className="  border border-zinc-500 ml-5  w-[80%] rounded-md p-1"
                   placeholder="Username / Email"
                 />
               </div>
@@ -128,7 +128,7 @@ export default function PasswordManager() {
                   onChange={(e) => setPassword(e.target.value)}
                   type={passinput}
                   name="password"
-                  className="w-80 border border-zinc-500 mr-5   rounded-md p-1"
+                  className="w-[80%] border border-zinc-500 mr-5   rounded-md p-1"
                   placeholder="Password"
                 />
                 <span onClick={viewPassword} className="absolute right-9">
@@ -142,10 +142,11 @@ export default function PasswordManager() {
               </div>
             </div>
           </div>
-          <div className="pass-saved-alert-area h-1/3 w-full   "></div>
-          <div className=" h-full w-2/3 justify-center items-center    flex flex-col gap-10 ">
-            <div className="   w-full h-full">
-              <PasswordGenerator />
+          <div className="pass-saved-alert-area h-full w-full items-center    flex flex-col">
+            <div className=" h-full w-2/3 justify-center items-center    flex flex-col gap-10 ">
+              <div className="   w-full h-full">
+                <PasswordGenerator />
+              </div>
             </div>
           </div>
         </div>

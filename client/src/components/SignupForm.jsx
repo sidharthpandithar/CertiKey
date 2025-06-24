@@ -60,7 +60,7 @@ export default function SignupForm() {
   };
   return (
     <div className="w-full relative flex flex-col justify-center items-center h-full">
-      <div className="w-[50vw] h-1/5 border-t-2 absolute right-0 top-0 rounded-tr-md"></div>
+      <div className="md:w-[37.5vw] w-17  h-1/5 border-t-2 absolute right-0 top-0 rounded-tr-md"></div>
       <div className="h-4/5 w-4/5 flex flex-col">
         <div className="w-full h-1/5 text-center flex flex-col gap-3 justify-center items-center">
           <div className="text-white w-full h-3/4 flex  justify-center items-center text-2xl font-bold">
@@ -77,9 +77,9 @@ export default function SignupForm() {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-10 w-full justify-center items-center">
-              <div className="flex gap-10 ">
-                <div className="w-60">
-                  <label className="text-white font-bold text-xl" htmlFor="">
+              <div className="flex gap-0 ">
+                <div className="w-25">
+                  <label className="text-white font-bold text-base" htmlFor="">
                     Username
                   </label>{" "}
                 </div>
@@ -92,9 +92,9 @@ export default function SignupForm() {
                   type="text"
                 />
               </div>
-              <div className="flex gap-10 ">
-                <div className="w-60">
-                  <label className="text-white font-bold text-xl" htmlFor="">
+              <div className="flex gap-0 ">
+                <div className="w-25">
+                  <label className="text-white font-bold text-base" htmlFor="">
                     Password
                   </label>{" "}
                 </div>
@@ -107,9 +107,9 @@ export default function SignupForm() {
                   type="password"
                 />
               </div>
-              <div className="flex gap-10 ">
-                <div className="w-60">
-                  <label className="text-white font-bold text-xl" htmlFor="">
+              <div className="flex gap-0 ">
+                <div className="w-25">
+                  <label className="text-white font-bold text-base" htmlFor="">
                     Re-type Password
                   </label>{" "}
                 </div>
@@ -126,7 +126,7 @@ export default function SignupForm() {
           </form>
         </div>
         <div className="h-full gap-10 w-full flex flex-col items-center">
-          <div className="  w-1/9 justify-center rounded-md items-center text-center">
+          <div className="flex mt-10  w-full justify-center rounded-md items-center text-center">
             <button
               form="signup-form"
               className="rounded-xl h-10 w-45 text-zinc-900 font-semi-bold bg-zinc-500 gap-2 justify-center items-center flex hover:scale-102 hover:font-bold hover:cursor-pointer"
@@ -135,7 +135,10 @@ export default function SignupForm() {
               Register Now
             </button>
           </div>
-          <div className="flex justify-center items-center text-zinc-100 text-sm hover:cursor-pointer hover:underline">
+          <div
+            onClick={() => navigate("/login")}
+            className="flex justify-center items-center text-zinc-100 text-sm hover:cursor-pointer hover:underline"
+          >
             Already have an account? Log in here
           </div>
         </div>
