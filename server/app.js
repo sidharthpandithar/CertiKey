@@ -17,6 +17,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 var app = express();
+app.set("trust proxy", 1);
 
 mongoose
   .connect(process.env.MONGO_URI)
