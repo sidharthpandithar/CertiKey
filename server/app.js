@@ -25,12 +25,10 @@ mongoose
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+cors({
+  origin: process.env.CLIENT_ORIGIN,
+  credentials: true,
+});
 
 app.use(
   expressSession({
