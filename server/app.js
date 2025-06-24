@@ -10,6 +10,7 @@ const expressSession = require("express-session");
 const passport = require("passport");
 const passwordRoutes = require("./routes/passwords");
 const passwordGenerator = require("./routes/generatePassword");
+const MongoStore = require("connect-mongo");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -30,13 +31,24 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(
   expressSession({
     resave: false,
     saveUninitialized: false,
-    secret: "RanDOM625r1252",
+    secret: process.env.SESSION_SECRET,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI,
+      collectionName: "sessions",
+    }),
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24,
+      sameSite: "none",
+      secure: true,
+    },
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(usersRouter.serializeUser());
