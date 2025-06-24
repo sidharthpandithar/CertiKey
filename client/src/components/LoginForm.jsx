@@ -36,7 +36,7 @@ export default function LoginForm() {
         transition: Bounce,
       });
 
-      localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("isLoggedIn", "true");
       navigate("/");
     } catch (err) {
       console.error("Login error:", err.response?.data || err.message);
