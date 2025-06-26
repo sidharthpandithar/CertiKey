@@ -47,6 +47,10 @@ router.get("/logout", isLoggedIn, function (req, res, next) {
   });
 });
 
+router.get("/ping", (req, res) => {
+  res.status(200).send("🟢 Keepalive: OK");
+});
+
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
